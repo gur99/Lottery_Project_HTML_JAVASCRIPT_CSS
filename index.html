@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+    <title>LotteryHomePage</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1><a href="index.html">The Academic
+                Lottery</a></h1>
+    </div>
+
+    <!-- MAIN NAVIGATOR -->
+    <nav>
+        <div class="ABCD">
+
+            <input type="button" value="About" id="aboutButton">
+        </div>
+
+
+        <div class="ABCD">
+            <input type="button" value="Statistical information" id="statisicsButton">
+        </div>
+
+        <div class="ABCD"><input type="button" value="Winners in history" id="winnersButton"></div>
+
+        <div class="ABCD"><input type="button" value="Terms of Use" id="temsOfUseButton"></div>
+
+    </nav>
+
+    <!--Current Amount & Rules-->
+    <div class="relevantInfo">
+        <div id="balance">
+            <h3>Your current balance amount: <span id="currentBalance">X</span></h3>
+        </div>
+        <div id="rules">
+            <h3>Rules:</h3>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi optio et eaque voluptatem? Architecto ex
+            culpa amet quis laudantium corporis, ducimus minima modi et? Veritatis dicta accusamus dolorem sint aliquid.
+
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium consequuntur ducimus incidunt fuga
+            voluptates dolor deserunt doloremque architecto ullam qui eaque numquam cupiditate nostrum, officia suscipit
+            obcaecati illo ex exercitationem.
+        </div>
+    </div>
+
+    <!-- Action buttons -->
+    <div class="relevantInfo">
+
+        <div id="ActionButtons">
+
+            <!-- ADD TABLE BUTTON -->
+            <div>
+                <input type="button" value="Add more table" class="actionButtonsDefaultStyle" onclick="addTable()">
+            </div>
+            <div>
+                <input type="button" value="Remove table" class="actionButtonsDefaultStyle" onclick="removeTable()">
+            </div>
+
+            <div><input type="button" value="Reset tables" class="actionButtonsDefaultStyle" onclick="clearAllTables()">
+            </div>
+
+            <div><input type="button" value="Start lottery" class="actionButtonsDefaultStyle" onclick="startButton()">
+            </div>
+            <div><input type="button" value="Done playing" class="actionButtonsDefaultStyle" onclick="donePlaying()">
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- FORM -->
+    <div id="form">
+
+        <!-- TABLE -->
+        <div class="table">
+            <div class="firstTablePart">
+                <div>
+                    <h4>Table <span class="spanNumber">1</span></h4>
+                </div>
+            </div>
+            <!-- NUMBERS-->
+            <div class="numbers">
+                <div><input type="number" maxlength="2" min="1" max="37" placeholder="_"
+                        title="Field 1 of 6, enter number between 1-37 only."></div>
+                <div><input type="number" maxlength="2" min="1" max="37" placeholder="_"
+                        title="Field 2 of 6, enter number between 1-37 only."></div>
+                <div><input type="number" maxlength="2" min="1" max="37" placeholder="_"
+                        title="Field 3 of 6, enter number between 1-37 only."></div>
+                <div><input type="number" maxlength="2" min="1" max="37" placeholder="_"
+                        title="Field 4 of 6, enter number between 1-37 only."></div>
+                <div><input type="number" maxlength="2" min="1" max="37" placeholder="_"
+                        title="Field 5 of 6, enter number between 1-37 only."></div>
+                <div><input type="number" maxlength="2" min="1" max="37" placeholder="_"
+                        title="Field 6 of 6, enter number between 1-37 only."></div>
+            </div>
+            <!-- STRONG NUMBER -->
+            <div class="secondTablePart">
+                <div>
+                    <h4>Strong Number</h4>
+                </div>
+            </div>
+
+            <div class="singleNumber">
+                <div><input type="number" maxlength="1" min="1" max="7" placeholder="_"
+                        title="Field 1 of 1, enter number between 1-7 only."></div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- RESTRICTION -->
+    <div class="container">
+        <div id="restriction">
+
+            <h4>SALE IS PROHIBITED TO ANYONE UNDER THE AGE OF 18.</h4>
+            <p>
+                <span>Warning:</span> The Ministry of Welfare and Social Security states that gambling can be addictive.
+                You can
+                contact the Welfare Information and Assistance Center of the Ministry of Welfare and Social Security at
+                118 (free call) 24 hours a day. Winning depends on luck only, and is not related to knowledge,
+                experience, ability or multiple games.
+            </p>
+        </div>
+    </div>
+
+
+
+    <dialog id="myDialog">
+        <img src="IMG/TIMEOUT.png" alt="Description of image" style="width:100%; height:auto;">
+        <p>You have run out of money. Please reload to continue playing.Time for break.</p>
+    </dialog>
+
+
+    <!-- ABOUT  DIALOG  -->
+    <dialog id="aboutDialog">
+        <h4>ABOUT</h4>
+        <p>The Academic Lottery serves as a unique platform for raising funds through engaging games of chance, with the
+            aim of supporting and improving public welfare at Ruppin.<br>Since its inception in 2024, it has contributed
+            to
+            impactful initiatives at the college, community development, and cultural enrichment.<br> By participating,
+            you
+            join the legacy of building a better future for all students at the college.</p>
+        <button id="closeDialog">Close</button>
+    </dialog>
+
+
+    <!-- STATISTICS DIALOG -->
+    <dialog id="StatisticsDialog">
+        <h4>STATISTICAL INFORMATION</h4>
+        <div class="statistics">
+            <!-- Row 0 -->
+            <div>Prize</div>
+            <div>Number of guesses</div>
+            <div>Winning probability</div>
+            <!-- Row 1 -->
+            <div>1</div>
+            <div>6 + Strong</div>
+            <div>1:16,273,488</div>
+            <!-- Row 2 -->
+            <div>2</div>
+            <div>6</div>
+            <div>1:2,712,248</div>
+            <!-- Row 3 -->
+            <div>3</div>
+            <div>4 + Strong</div>
+            <div>1:2,333</div>
+        </div>
+        <button id="closeSDialog">Close</button>
+    </dialog>
+
+    <!-- WINNERS DIALOG -->
+    <dialog id="winnersDialog">
+        <h4>Winners</h4>
+        <p>There are no winners yet, you have the opportunity to try and lead the way to success.<br> Submit a form now
+            and you might be the first to win the lottery!</p>
+        <button id="closeWDialog">Close</button>
+    </dialog>
+
+    <!-- TERMS OF USE DIALOG -->
+    <dialog id="TermsOfUseDialog">
+        <h4>TERMS OF USE</h4>
+        <p>By using The Academic Lottery website, you agree to abide by our terms, including eligibility for
+            participants aged 18 and above.<br> All activities on this platform are for entertainment purposes, and
+            outcomes
+            are based solely on chance, with no guarantees of winning.</p>
+        <button id="closeTermsOfUseDialog">Close</button>
+    </dialog>
+
+
+</body>
+
+</html>

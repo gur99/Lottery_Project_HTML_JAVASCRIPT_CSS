@@ -1,0 +1,441 @@
+body {
+    margin: 0;
+    background-color: #dbd5ec;
+}
+
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: rgb(116, 8, 8);
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+
+input[type=button] {
+    cursor: pointer;
+}
+
+.container {
+    padding: 20px;
+    /* border: 1px solid black; */
+    /* background-color: rgb(136, 136, 228); */
+    background-image: linear-gradient(to right, rgba(213, 215, 219, 0.671), rgb(158, 90, 81));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* flex-wrap: wrap; */
+}
+
+nav {
+    padding: 1em;
+    background-image: linear-gradient(to right, rgba(145, 2, 2, 0.671), rgb(158, 90, 81), rgba(145, 2, 2, 0.671));
+    background-color: rgb(138, 65, 65);
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.ABCD {
+    height: 50px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: rgb(201, 181, 181);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.relevantInfo {
+
+    justify-self: center;
+    box-sizing: border-box;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 35% 60%;
+    flex-wrap: wrap;
+    background-color: rgba(88, 80, 158, 0.767);
+    padding: 2em;
+    gap: 5%;
+}
+
+#balance {
+    background-color: rgba(240, 248, 255, 0.308);
+    padding: 1em;
+    border-radius: 15px;
+}
+
+#currentBalance {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(73, 40, 100);
+    font-size: larger;
+}
+
+#rules {
+    background-color: rgba(240, 248, 255, 0.308);
+    padding: 1em;
+    border-radius: 15px;
+
+}
+
+.relevantInfo:nth-of-type(3) {
+    /* border: 1px solid black; */
+    background-color: rgba(240, 248, 255, 0.438);
+    color: rgba(88, 80, 158, 0.767);
+    width: 80%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#ActionButtons {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 1em;
+}
+
+/* #ActionButtons input[type="button"]  */
+.actionButtonsDefaultStyle {
+    height: 3em;
+    width: 8em;
+    border-radius: 15px;
+
+    font-weight: bold;
+    font-size: medium;
+    color: #ddd;
+    background-color: rgb(69, 46, 100);
+}
+
+#ActionButtons div:nth-child(4) .actionButtonsDefaultStyle {
+    background-color: darkcyan;
+}
+
+#ActionButtons div:nth-child(5) .actionButtonsDefaultStyle {
+    background-color: brown;
+}
+
+/* #ActionButtons input[type="button"]:hover  */
+.actionButtonsDefaultStyle:hover {
+    transition: 0.1s;
+    background-color: antiquewhite;
+    color: rgb(69, 46, 100);
+
+}
+
+.disabledButton {
+    width: 90%;
+    height: 90%;
+    height: 50px;
+    width: 150px;
+    border-radius: 15px;
+
+    color: #ddd;
+    background-color: rgb(119, 119, 119);
+}
+
+.disabledButton:hover {
+    transition: none;
+    background-color: rgb(119, 119, 119);
+    color: #ddd;
+    cursor: default;
+}
+
+/* ------------------------------------------------------------------------------------------- */
+#form {
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    background-color: rgba(240, 248, 255, 0.438);
+
+    justify-self: center;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: end;
+    padding: 0;
+    margin: 0;
+    gap: 0;
+
+}
+
+.table {
+    height: 200px;
+    border: 1px solid rgb(69, 46, 100);
+    width: 80%;
+    background-color: #dbd5ec;
+    opacity: 0.8;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    /* remove space */
+    margin: 0;
+    margin-bottom: 1%;
+    padding: 0;
+}
+
+.table:last-child {
+    margin-bottom: 2%;
+}
+
+.firstTablePart {
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.firstTablePart div {
+    border-radius: 15px;
+    border: 1px solid rgb(69, 46, 100);
+    width: 8em;
+    text-align: center;
+}
+
+.numbers {
+    padding: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+
+.numbers div {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 2em;
+    width: 4em;
+}
+
+.secondTablePart {
+    border-top: 1px dashed black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.secondTablePart div {
+    width: 8em;
+    border: 1px solid white;
+    border-radius: 15px;
+    border-top-right-radius: 65%;
+    border-bottom-right-radius: 65%;
+    color: white;
+    text-align: center;
+    background-color: rgb(69, 46, 100);
+}
+
+.singleNumber {
+    padding: 2em;
+    padding-left: 0.75%;
+    border-top: 1px dashed navy;
+    display: flex;
+    justify-content: start;
+}
+
+.singleNumber div {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 2em;
+    width: 4em;
+    margin-left: 7.5%;
+
+}
+
+
+input[type="number"] {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.5em;
+    font-size: large;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.ABCD input[type="button"] {
+    width: 90%;
+    height: 90%;
+    height: 50px;
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 15px;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+
+.ABCD input[type="button"]:hover {
+    background-color: rgb(73, 51, 51);
+    color: white;
+    transition: ease-in-out .3s, color ease-in-out .4s;
+
+}
+
+#restriction {
+    box-sizing: border-box;
+    background-color: whitesmoke;
+    width: 30%;
+    justify-self: center;
+    padding: 1em;
+}
+
+#restriction span {
+    font-weight: bold;
+}
+
+
+
+
+.statistics {
+    display: grid;
+    grid-template-columns: 30% 30% 40%;
+    justify-content: center;
+}
+
+.statistics div {
+    border: 1px solid black;
+    padding: 1em;
+}
+
+
+
+/* Responsiveness */
+/*mobile phones and tablets(max width of 960px)*/
+@media (max-width: 960px) {
+    #restriction {
+        width: 100%;
+    }
+
+    #restriction p,
+    span {
+        font-size: small;
+    }
+
+    #restriction h4 {
+        font-size: medium;
+    }
+
+    .relevantInfo {
+        justify-self: start;
+        width: 100%;
+        justify-self: center;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    #balance {
+        font-size: medium;
+    }
+
+    #rules {
+        font-size: small;
+    }
+
+    #rules h3 {
+        font-size: medium;
+    }
+
+
+    .relevantInfo:nth-of-type(3) {
+        background-color: rgba(240, 248, 255, 0.438);
+        color: rgba(88, 80, 158, 0.767);
+        width: 100%;
+        display: flex;
+
+    }
+
+    #ActionButtons {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: start;
+        gap: 1em;
+    }
+
+
+    .actionButtonsDefaultStyle {
+        width: 90%;
+        height: 90%;
+        height: 50px;
+        width: 150px;
+        border-radius: 15px;
+
+        font-weight: bold;
+        font-size: medium;
+        color: #ddd;
+        background-color: rgb(69, 46, 100);
+    }
+
+    #form {
+        width: 100%;
+        display: inline;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: end;
+        padding: 0;
+        margin: 0;
+        gap: 0;
+
+    }
+
+
+    .table {
+        box-sizing: border-box;
+        width: 100%;
+        height: fit-content;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        padding: 1%;
+
+    }
+
+    .firstTablePart {
+        height: 100px;
+        align-self: center;
+    }
+
+
+    .firstTablePart h4 {
+        font-size: small;
+    }
+
+    .secondTablePart,
+    .strongNumber {
+        height: 100px;
+    }
+
+    .secondTablePart h4 {
+        font-size: small;
+    }
+
+    .actionButtonsDefaultStyle {
+        width: 90%;
+        height: 3em;
+        width: 8em;
+        border-radius: 15px;
+
+        font-weight: bold;
+        font-size: medium;
+        color: #ddd;
+        background-color: rgb(69, 46, 100);
+    }
+
+}
