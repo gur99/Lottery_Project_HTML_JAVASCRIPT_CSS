@@ -420,3 +420,17 @@ document.getElementById("closeTermsOfUseDialog").addEventListener("click", funct
 
 
 
+// Rules expand and minimize
+
+function showRules() {
+    let rulesContent = document.getElementById("rulesContent");
+    let rulesButton = document.getElementById("rulesButton");
+
+    if (rulesContent.style.display == "none") {
+        rulesContent.style.display = "block";
+        rulesButton.textContent = "Minimize";
+    } else {
+        rulesContent.style.display = "none";
+        rulesButton.textContent = "Show More";
+    }
+}

@@ -71,6 +71,7 @@ nav {
     background-color: rgba(240, 248, 255, 0.308);
     padding: 1em;
     border-radius: 15px;
+    height: fit-content;
 }
 
 #currentBalance {
@@ -313,6 +314,23 @@ input[type="number"] {
     padding: 1em;
 }
 
+#rulesButton {
+    cursor: pointer;
+    padding: 0.6em;
+    border-radius: 5px;
+    color: #ddd;
+    background-color: rgb(69, 46, 100);
+}
+
+#rules h4,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+#rules p {
+    padding-bottom: 0.5em;
+}
 
 
 /* Responsiveness */

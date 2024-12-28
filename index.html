@@ -40,12 +40,43 @@
         </div>
         <div id="rules">
             <h3>Rules:</h3>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi optio et eaque voluptatem? Architecto ex
-            culpa amet quis laudantium corporis, ducimus minima modi et? Veritatis dicta accusamus dolorem sint aliquid.
+            <h4>Number Validations:</h4>
+            <p>
+                All numbers in a table must be unique (no duplicates).<br>
+                All input fields must be filled: empty fields are not allowed.<br>
+                Numbers must be within the specified range: <br>
+                1-37 for regular numbers. <br>
+                1-7 for the strong number.
+            </p>
+            <div id="rulesContent" style="display: none;">
+                <h4>Table Limitations:</h4>
+                <p>
+                    Users can add up to 5 tables for a single game. <br>
+                    Each table costs 300 units from the user's balance.<br>
+                </p>
+                <h4>Winning Conditions:</h4>
+                <p>
+                    Matches are determined based on the numbers and the strong number.
+                </p>
+                <h4>Prize structure:</h4>
+                <p>
+                    6 matching numbers + strong number: Maximum prize.<br>
+                    6 matching numbers: Secondary prize.<br>
+                    4 matching numbers + strong number: Lower prize.<br>
+                    Other combinations: No prize.
+                </p>
+                <h4>Lottery Results:</h4>
+                <p>
+                    Results are randomly generated, including 6 numbers (1-37) and 1 strong number (1-7). <br>
+                    Results are displayed after the game concludes. <br>
+                </p>
+            </div>
+            <h3>
+                <button id="rulesButton" onclick="showRules()">Show more</button>
+            </h3>
 
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium consequuntur ducimus incidunt fuga
-            voluptates dolor deserunt doloremque architecto ullam qui eaque numquam cupiditate nostrum, officia suscipit
-            obcaecati illo ex exercitationem.
+
+
         </div>
     </div>
 
