@@ -311,8 +311,23 @@ function displayResults(results) {
             numbersString += ", ";
         }
     }
-
-    alert("Lottery Results:\nNumbers: " + numbersString + "\nStrong Number: " + results.strongNumber);
+    let tableIndex = 1;
+    let tables = document.querySelectorAll(".table");
+    let myTables = "Your tables:\n";
+    for (let table of tables) {
+        let numberInputs = table.querySelectorAll(".numbers input");
+        let strongNumberInput = table.querySelector(".singleNumber input");
+        myTables += "Table " + tableIndex + "\nNumbers:";
+        tableIndex++;
+        let numbers = [];
+        for (let i = 0; i < numberInputs.length; i++) {
+            numbers.push(parseInt(numberInputs[i].value));
+        }
+        strongNumber = parseInt(strongNumberInput.value);
+        myTables += numbers + "\nStrong number:\n" + strongNumber + "\n";
+        // --------------------------------------------------------------------------------------------------------------------------------------------------------------
+    }
+    alert("Lottery Results:\nNumbers: " + numbersString + "\nStrong Number: " + results.strongNumber + "\n\n" + myTables);
 }
 
 // DONE PLAYING function ------------------------------------------------------------------------- 
@@ -337,6 +352,8 @@ function donePlaying() {
         button.disabled = true;
         button.className = 'disabledButton';
     });
+
+    alert("Your final amount: " + currentAmount + "\nWe hope to see you soon!");
 }
 
 
